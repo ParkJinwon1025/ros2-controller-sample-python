@@ -8,7 +8,7 @@ package_name = 'test_nodes_py' # 패키지 이름 설정
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(exclude=['test']), # 설치할 Python 패키지 목록 자동 탐색
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
