@@ -18,22 +18,18 @@ colcon build # 패키지 빌드
 ### 3. 노드 실행 및 테스트
 
 ```bash
-# 첫번째 터미널 ( NodeA 실행 )
-cd ros2-controller-sample-python
-ros2 run test_nodes_py node_a
-```
-
-```bash
-# 두번째 터미널 ( NodeB 실행 )
-cd ros2-controller-sample-python
-ros2 run test_nodes_py node_b
+# 첫번째 터미널 ( NodeA, NodeB 실행 )
+cd ubisam_ros2_py
+source install/setup.bash # 환경 설정
+ros2 launch test_nodes_py nodes.launch.py
 ```
 
 ```bash
 # 세번째 터미널 ( Ros2 WebSocket 서버 실행 )
-cd ros2-controller-sample-python
+cd ubisam_ros2_py
 sudo apt update
 sudo apt install ros-humble-rosbridge-suite # 패키지 설치 
+source install/setup.bash
 ros2 launch rosbridge_server  rosbridge_websocket_launch.xml # 서버 실행
 ```
 
@@ -43,7 +39,7 @@ ros2 launch rosbridge_server  rosbridge_websocket_launch.xml # 서버 실행
 
 ### 2. 서버 실행
 ```bash
-cd ros2-controller-sample-python
+cd ubisam_ros2_py
 python3 -m http.server 8000
 ```
 
