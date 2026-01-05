@@ -25,7 +25,7 @@ ros2 launch test_nodes_py nodes.launch.py
 ```
 
 ```bash
-# 세번째 터미널 ( Ros2 WebSocket 서버 실행 )
+# 두번째 터미널 ( Ros2 WebSocket 서버 실행 )
 cd ubisam_ros2_py
 sudo apt update
 sudo apt install ros-humble-rosbridge-suite # 패키지 설치 
@@ -48,3 +48,4 @@ python3 -m http.server 8000
 ```bash
 http://192.168.189.132:8000/web_client.html
 ```
+
